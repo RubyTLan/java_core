@@ -3,7 +3,7 @@ package com.caresoft.clinicapp;
 import java.util.ArrayList;
 import java.util.Date;
 
-public class AdminUser extends User implements HIPAACompliantUser, HIPAACompliantAdmin {
+public class AdminUser extends User implements HIPAACompliantUser, HIPAACompliantAdmin {//can only extend one class, but implements multiple interfaces
   
     private Integer employeeID;
     private String role;
