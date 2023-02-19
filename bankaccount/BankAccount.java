@@ -5,16 +5,16 @@ class BankAccount{
     private static double totalMoney;
 
 
-    public BankAccount(){
-        this.checkingBalance=0;
-        this.savingsBalance=0;
+    public BankAccount(double checkingBalance,double savingsBalance){
+        this.checkingBalance=checkingBalance;
+        this.savingsBalance=savingsBalance;
         numberOfAccounts++;
     }
 
-    pubic double getCheckingBalance(){
+    public double getCheckingBalance(){
         return this.checkingBalance;
     }
-    pubic double getSavingsBalance(){
+    public double getSavingsBalance(){
         return this.savingsBalance;
     }
 
@@ -22,7 +22,7 @@ class BankAccount{
         System.out.println("Please enter account type:checking or saving?");
         String accountType=System.console().readLine();
         if(accountType=="checking"){
-            this.checkingBalance+=amount;
+            this.checkingBalance=this.checkingBalance+amount;
         }else if(accountType=="saving"){
              this.savingsBalance+=amount;
         }
@@ -33,9 +33,9 @@ class BankAccount{
         String accountType=System.console().readLine();
         if(accountType=="checking" && this.checkingBalance>=amount ){
             this.checkingBalance-=amount;
-        }else if(accountType=="saving" && this.savingsBalance>=amount;){
+        }else if(accountType=="saving" && this.savingsBalance>=amount){
              this.savingsBalance-=amount;
-        }else{System.out.println("Error!")}
+        }else{System.out.println("Error!");}
         totalMoney-=amount;
     }
     public void total(){
