@@ -21,9 +21,10 @@ class BankAccount{
     public void deposit(double amount){
         System.out.println("Please enter account type:checking or saving?");
         String accountType=System.console().readLine();
-        if(accountType=="checking"){
+        if(accountType.equals("checking")){
             this.checkingBalance=this.checkingBalance+amount;
-        }else if(accountType=="saving"){
+
+        }else if(accountType.equals("saving")){
              this.savingsBalance+=amount;
         }
         totalMoney+=amount;
@@ -31,9 +32,9 @@ class BankAccount{
     public void withdraw(double amount){
         System.out.println("Please enter account type:checking or saving?");
         String accountType=System.console().readLine();
-        if(accountType=="checking" && this.checkingBalance>=amount ){
+        if(accountType.equals("checking") && this.checkingBalance>=amount ){
             this.checkingBalance-=amount;
-        }else if(accountType=="saving" && this.savingsBalance>=amount){
+        }else if(accountType.equals("saving") && this.savingsBalance>=amount){
              this.savingsBalance-=amount;
         }else{System.out.println("Error!");}
         totalMoney-=amount;
