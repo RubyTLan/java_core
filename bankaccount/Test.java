@@ -13,7 +13,7 @@ public class Test {
 		// System.out.println(account2.getCheckingBalance());
 		account1.total();
 		// account2.total();
-		System.out.println(int numberOfAccounts);
+		// System.out.println(int numberOfAccounts);
 		// System.out.println(double totalMoney);
 
 	}
